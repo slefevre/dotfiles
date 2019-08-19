@@ -1,0 +1,3 @@
+ssh-add &>/dev/null || eval `ssh-agent` &>/dev/null  # start ssh-agent if not present
+[ $? -eq 0 ] && {                                     # ssh-agent has started
+}
