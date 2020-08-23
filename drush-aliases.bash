@@ -1,0 +1,7 @@
+alias drush='lando drush'
+alias cr='drush cr'
+alias uli='drush uli --name=slefevre'
+alias cex='drush cex -y'
+alias cim='drush cim -y'
+alias cim='drush cim -y'
+alias updb='drush updb -y'
