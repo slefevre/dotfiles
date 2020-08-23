@@ -5,7 +5,3 @@ commit() {
   [[ $# -eq 0 ]] && set -- A default commit message here.
   command git commit -m "$*"
 }
-
-redirects() {
-  wget $1 2>&1 | grep Location:
-}
