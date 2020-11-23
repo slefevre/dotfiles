@@ -1,5 +1,4 @@
 FILE=./dotfiles/aliases.bash && test -f $FILE && source $FILE
-FILE=./dotfiles/cygwin-aliases.bash && test -f $FILE && source $FILE
 FILE=./dotfiles/drush-aliases.bash && test -f $FILE && source $FILE
 FILE=./dotfiles/functions.bash && test -f $FILE && source $FILE
 FILE=./dotfiles/git-aliases.bash && test -f $FILE && source $FILE
