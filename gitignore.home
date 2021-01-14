@@ -1,0 +1,31 @@
+# Ignore everything
+*
+
+# But not these files/directories, with some exceptions
+
+!*.ssh/
+!*.ssh/config
+!.babunrc
+!.bash_alias
+!.bash_branch_prompt
+!.cygwin_alias
+!.bash_profile
+!.bashrc
+!*.drush/
+!*.drush/aliases.drushrc.php
+!.gitalias
+!.gitconfig
+!.gitignore
+!.gitglobalignore
+!.profile
+!.vim/
+!.vim/*
+!.vimrc
+!.zsh_aliases
+!.zsh_profile
+!.zshrc
+!hosts
+!recipes.txt
+!scripts/
+!scripts/*
+.vim/.netrwhist
