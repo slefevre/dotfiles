@@ -1,25 +1,17 @@
-# load this in .bash_profile
-# https://stackoverflow.com/a/18915067/151841
 
-SSH_ENV="$HOME/.ssh/env"
+#!/bin/bash
+SSHAGENT=/usr/bin/ssh-agent
 
-function start_agent {
-    echo "Initialising new SSH agent..."
-    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-    echo succeeded
-    chmod 600 "${SSH_ENV}"
-    . "${SSH_ENV}" > /dev/null
-    /usr/bin/ssh-add;
-}
+export SSH_AGENT_PID=$(pgrep ssh-agent)
 
-# Source SSH settings, if applicable
+SSH_AUTH_SOCK=$( ls -1 /tmp/ssh-*/* 2>/dev/null | head -n 1 )
 
-if [ -f "${SSH_ENV}" ]; then
-    . "${SSH_ENV}" > /dev/null
-    #ps ${SSH_AGENT_PID} doesn't work under cywgin
-    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-        start_agent;
-    }
+if [[ $(pgrep ssh-agent) == "" ]]; then
+  rm -r /tmp/ssh-* &>/dev/null;
+  eval $($SSHAGENT -s)
+  ssh-add $1
 else
-    start_agent;
+  export SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
+  export SSH_AGENT_PID=$(ps -f|grep ssh-agent|awk '{print $2}')
 fi
+
