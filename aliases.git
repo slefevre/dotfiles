@@ -17,6 +17,3 @@ recent = for-each-ref --count=25  --sort=-committerdate refs/heads/ --format='%(
 
 ; git regrow [target_branch] [source_branch] [remote]
 regrow = ! "gitregrow() { name=$(git rev-parse --abbrev-ref HEAD) ; git checkout ${2:-master}; git branch -D ${1:-$name}; git push ${3:-origin} --delete ${1:-$name}; git checkout -b ${1:-$name}; git push --set-upstream ${3:-origin} ${1:-$name}; }; gitregrow"
-
-; find-file
-find-file = ! "gitfind-file() { git ls-tree -r HEAD | grep $1 ; }; gitfind-file"
