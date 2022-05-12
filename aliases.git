@@ -1,3 +1,8 @@
+;; include this file in ~/.gitconfig
+;; 
+;;
+;; path = /path/to/this/file/aliases.git
+
 [alias]
 
 ; delete a branch locally and remotely, see `grow`
