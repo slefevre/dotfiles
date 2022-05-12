@@ -1,0 +1,11 @@
+FILE=./dotfiles/aliases.bash && test -f $FILE && source $FILE
+FILE=./dotfiles/drush-aliases.bash && test -f $FILE && source $FILE
+FILE=./dotfiles/functions.bash && test -f $FILE && source $FILE
+FILE=./dotfiles/bash-git-aliases.bash && test -f $FILE && source $FILE
+FILE=./dotfiles/git-branch-prompt.bash && test -f $FILE && source $FILE
+FILE=./dotfiles/git-functions.bash && test -f $FILE && source $FILE
+FILE=./dotfiles/grep-aliases.bash && test -f $FILE && source $FILE
+FILE=./dotfiles/tmux_login.sh && test -f $FILE && source $FILE
+FILE=./dotfiles/http-verbs.sh && test -f $FILE && source $FILE
+FILE=./dotfiles/nvm.bashrc && test -f $FILE && source $FILE
+FILE=./dotfiles/start-ssh-agent.bash && test -f $FILE && source $FILE
