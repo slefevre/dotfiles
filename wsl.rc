@@ -1,4 +1,4 @@
-FILE=./dotfiles/aliases.bash && test -f $FILE && source $FILE
+FILE=./dotfiles/common.rc && test -f $FILE && source $FILE
 FILE=./dotfiles/drush-aliases.bash && test -f $FILE && source $FILE
 FILE=./dotfiles/functions.bash && test -f $FILE && source $FILE
 FILE=./dotfiles/bash-git-aliases.bash && test -f $FILE && source $FILE
