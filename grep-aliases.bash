@@ -1,4 +1,8 @@
+alias grepi="grep -i"
 alias igrep="grep -i"
 alias vgrep="grep -v"
+alias grepv="grep -v"
 alias rgrep="grep -r"
+alias grepr="grep -r"
 alias nirgrep="grep -nir"
+alias grepnir="grep -nir"
