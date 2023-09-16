@@ -25,3 +25,5 @@ regrow = ! "gitregrow() { name=$(git rev-parse --abbrev-ref HEAD) ; git checkout
 
 ;
 pretty-log = log --pretty='format:%h %an %ci (%cr) \"%s\" %d'
+
+oneline = log --pretty=format:\"%h %as (%cr) %an \\\"%s\\\" %d\"
